@@ -1,6 +1,6 @@
 <?php namespace ProcessWire;
 
-use Youshido\GraphQL\Types\Object\ObjectType;
+use Youshido\GraphQL\Type\Object\ObjectType;
 use Youshido\GraphQL\Type\InputObject\InputObjectType;
 use Youshido\GraphQL\Type\Scalar\FloatType;
 use Youshido\GraphQL\Type\Scalar\IntType;
@@ -37,6 +37,11 @@ class FieldtypeMapMarkerGraphQL extends WireData implements Module {
 
       'requires' => ['ProcessGraphQL']
       );
+  }
+
+  public static function getName()
+  {
+    return 'FieldtypeMapMarker';
   }
 
   public static function getType()
