@@ -39,7 +39,7 @@ class FieldtypeMapMarkerGraphQL extends WireData implements Module {
       );
   }
 
-  public static function getType()
+  public static function getType(Field $field)
   {
     return new ObjectType([
       'name' => 'MapMarker',
@@ -79,7 +79,7 @@ class FieldtypeMapMarkerGraphQL extends WireData implements Module {
     ]);
   }
 
-  public static function getInputType()
+  public static function getInputType(Field $field)
   {
     return new InputObjectType([
       'name' => 'MapMarkerInput',
