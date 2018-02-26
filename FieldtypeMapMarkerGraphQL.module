@@ -39,11 +39,6 @@ class FieldtypeMapMarkerGraphQL extends WireData implements Module {
       );
   }
 
-  public static function getName()
-  {
-    return 'FieldtypeMapMarker';
-  }
-
   public static function getType()
   {
     return new ObjectType([
