@@ -8,7 +8,7 @@ use Youshido\GraphQL\Type\Scalar\StringType;
 use ProcessWire\Page;
 use ProcessWire\Field;
 
-class FieldtypeMapMarkerGraphQL extends WireData implements Module {
+class GraphQLFieldtypeMapMarker extends WireData implements Module {
 
   /**
    * getModuleInfo is a module required by all modules to tell ProcessWire about them
@@ -21,7 +21,7 @@ class FieldtypeMapMarkerGraphQL extends WireData implements Module {
     return array(
 
       // The module's title, typically a little more descriptive than the class name
-      'title' => 'FieldtypeMapMarkerGraphQL', 
+      'title' => 'GraphQLFieldtypeMapMarker', 
 
       // version number 
       'version' => 0, 
@@ -30,7 +30,7 @@ class FieldtypeMapMarkerGraphQL extends WireData implements Module {
       'summary' => 'GraphQL support for FieldtypeMapMarker.',
       
       // Optional URL to more information about the module
-      'href' => 'https://github.com/dadish/FieldtypeMapMarkerGraphQL',
+      'href' => 'https://github.com/dadish/GraphQLFieldtypeMapMarker',
     
       // Optional font-awesome icon name, minus the 'fa-' part
       'icon' => 'map',
