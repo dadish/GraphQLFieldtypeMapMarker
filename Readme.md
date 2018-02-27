@@ -1,4 +1,4 @@
-FieldtypeMapMarkerGraphQL
+GraphQLFieldtypeMapMarker
 =========================
 
 Module enables FieldtypeMapMarker for [ProcessGraphQL][graphql] module
