@@ -13,7 +13,7 @@ you install this module it seamlessly adds support for FieldtypeMapMarker.
 There is nothing else needed after you install this module. Everything works behind
 the scenes and FieldtypeMapMarker fields will be available in your GraphQL api.
 
-To see how can you create your own GraphQL extension modules for ProcessWire
+To learn how can you create your own GraphQL extension modules for ProcessWire
 see [documentation][graphql-third-party] at ProcessGraphQL's github repository.
 
 [graphql]: https://github.com/dadish/ProcessGraphQL#processgraphql
