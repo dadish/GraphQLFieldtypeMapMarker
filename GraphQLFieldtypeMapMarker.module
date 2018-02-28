@@ -24,7 +24,7 @@ class GraphQLFieldtypeMapMarker extends WireData implements Module {
       'title' => 'GraphQLFieldtypeMapMarker', 
 
       // version number 
-      'version' => 0, 
+      'version' => '1.0.0',
 
       // summary is brief description of what this module is
       'summary' => 'GraphQL support for FieldtypeMapMarker.',
