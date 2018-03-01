@@ -12,7 +12,7 @@ that. ProcessGraphQL does not support FieldtypeMapMarker out of the box. But onc
 you install this module it seamlessly adds support for FieldtypeMapMarker.
 
 ### Installation
-This module's files should be placed in /site/modules/ProCache/ 
+This module's files should be placed in /site/modules/GraphQLFieldtypeMapMarker/ 
 [How to install or uninstall modules](http://modules.processwire.com/install-uninstall/)
 
 ### Usage
