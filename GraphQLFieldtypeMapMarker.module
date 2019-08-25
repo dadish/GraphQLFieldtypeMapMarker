@@ -1,10 +1,8 @@
 <?php namespace ProcessWire;
 
-use Youshido\GraphQL\Type\Object\ObjectType;
-use Youshido\GraphQL\Type\InputObject\InputObjectType;
-use Youshido\GraphQL\Type\Scalar\FloatType;
-use Youshido\GraphQL\Type\Scalar\IntType;
-use Youshido\GraphQL\Type\Scalar\StringType;
+use GraphQL\Type\Definition\Type;
+use GraphQL\Type\Definition\ObjectType;
+use GraphQL\Type\Definition\InputObjectType;
 use ProcessWire\Page;
 use ProcessWire\Field;
 
@@ -24,7 +22,7 @@ class GraphQLFieldtypeMapMarker extends WireData implements Module {
       'title' => 'GraphQLFieldtypeMapMarker', 
 
       // version number 
-      'version' => '1.0.0',
+      'version' => '2.0.0',
 
       // summary is brief description of what this module is
       'summary' => 'GraphQL support for FieldtypeMapMarker.',
@@ -45,7 +43,7 @@ class GraphQLFieldtypeMapMarker extends WireData implements Module {
       'name' => 'MapMarker',
       'fields' => [
         'lat' => [
-          'type' => new FloatType(),
+          'type' => Type::float(),
           'description' => 'The latitude of the MapMarker.',
           'resolve' => function ($value) {
             return (float) $value->lat;
@@ -53,7 +51,7 @@ class GraphQLFieldtypeMapMarker extends WireData implements Module {
         ],
 
         'lng' => [
-          'type' => new FloatType(),
+          'type' => Type::float(),
           'description' => 'The longitude of the MapMarker.',
           'resolve' => function ($value) {
             return (float) $value->lng;
@@ -61,7 +59,7 @@ class GraphQLFieldtypeMapMarker extends WireData implements Module {
         ],
 
         'address' => [
-          'type' => new StringType(),
+          'type' => Type::string(),
           'description' => 'The address of the MapMarker.',
           'resolve' => function ($value) {
             return (string) $value->address;
@@ -69,7 +67,7 @@ class GraphQLFieldtypeMapMarker extends WireData implements Module {
         ],
 
         'zoom' => [
-          'type' => new IntType(),
+          'type' => Type::int(),
           'description' => 'The zoom of the MapMarker.',
           'resolve' => function ($value) {
             return (integer) $value->zoom;
@@ -84,10 +82,10 @@ class GraphQLFieldtypeMapMarker extends WireData implements Module {
     return new InputObjectType([
       'name' => 'MapMarkerInput',
       'fields' => [
-        'lat' => new FloatType(),
-        'lng' => new FloatType(),
-        'address' => new stringType(),
-        'zoom' => new IntType(),
+        'lat' => Type::float(),
+        'lng' => Type::float(),
+        'address' => Type::string(),
+        'zoom' => Type::int(),
       ],
     ]);
   }
