@@ -93,6 +93,7 @@ class GraphQLFieldtypeMapMarker extends WireData implements Module {
   public static function setValue(Page $page, Field $field, $value)
   {
     $fieldName = $field->name;
+    $page->$fieldName->skipGeocode = true;
     $page->$fieldName->lat = $value['lat'];
     $page->$fieldName->lng = $value['lng'];
     $page->$fieldName->address = $value['address'];
